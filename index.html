@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>signal drift</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="signaldrift ::: thoughts on form" />
+	<meta name="keywords" content="mctavish datapoets net.art generative algorithmic code electronic literature web" />
+	<meta name="author" content="mctavish">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebPage",
+			"name": "signaldrift",
+			"breadcrumb": "signaldrift > index",
+          		"url": "http://www.signaldrift.net/index.html",
+			"description": "datapoets ::: minimalist creative code",
+			"datePublished": "2021-02-18",
+          		"image": "https://www.signaldrift.net/apple-touch-icon.png",
+			"author": "http://datapoets.com",
+			"license": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US"
+		}
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	<link rel="stylesheet" href="/css/datapoets.css"/>
+	<style>
+		.grid_absolute_4x4_rect > div.griditem:nth-child(3n) {
+			background-color: var(--warmblack);
+		}
+		.grid_absolute_4x4_rect > div.griditem:nth-child(3n+1) {
+			background-color: var(--warmwhite);
+		}
+		.grid_absolute_4x4_rect  > div.griditem:nth-child(3n+2) {
+			background-color: var(--red);
+		}
+		.grid_absolute_4x4_circle > div.griditem:nth-child(3n+1) {
+			background-color: var(--warmblack);
+		}
+		.grid_absolute_4x4_circle > div.griditem:nth-child(3n+2) {
+			background-color: var(--warmwhite);
+		}
+		.grid_absolute_4x4_circle  > div.griditem:nth-child(3n) {
+			background-color: var(--red);
+		}
+		.grid_absolute_4x4_square > div.griditem:nth-child(3n+2) {
+			background-color: var(--warmblack);
+		}
+		.grid_absolute_4x4_square > div.griditem:nth-child(3n) {
+			background-color: var(--warmwhite);
+		}
+		.grid_absolute_4x4_square  > div.griditem:nth-child(3n+1) {
+			background-color: var(--red);
+		}
+
+
+
+		/*.gridcontainer0 > div.griditem:nth-child(2n) {
+			background-color: var(--warmblack);
+		}
+		.gridcontainer0 > div.griditem:nth-child(2n+1) {
+			background-color: var(--warmwhite);
+		}
+		.gridcontainer1 > div.griditem:nth-child(2n+1) {
+			background-color: var(--warmblack);
+		}
+		.gridcontainer1 > div.griditem:nth-child(2n) {
+			background-color: var(--warmwhite);
+		}*/
+	</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4SBZC409DT"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-4SBZC409DT');
+	</script>
+</head>
+<body id="top" >
+
+<div id="svgframe" aria-hidden="true">
+	<svg xmlns="http://www.w3.org/2000/svg" id="svg" class="frame" ></svg>
+</div>
+<div id="divframe" aria-hidden="true">
+<div id="canvas0" class="grid_absolute_4x4_rect" aria-hidden="true">
+	<div id="l0r0c0" class="griditem"></div><div id="l0r0c1" class="griditem"></div><div id="l0r0c2" class="griditem"></div><div id="l0r0c3" class="griditem"></div>
+	<div id="l0r1c0" class="griditem"></div><div id="l0r1c1" class="griditem"></div><div id="l0r1c2" class="griditem"></div><div id="l0r1c3" class="griditem"></div>
+	<div id="l0r2c0" class="griditem"></div><div id="l0r2c1" class="griditem"></div><div id="l0r2c2" class="griditem"></div><div id="l0r2c3" class="griditem"></div>
+	<div id="l0r3c0" class="griditem"></div><div id="l0r3c1" class="griditem"></div><div id="l0r3c2" class="griditem"></div><div id="l0r3c3" class="griditem"></div>
+</div>
+<div id="canvas1" class="grid_absolute_4x4_square" aria-hidden="true">
+	<div id="l1r0c0" class="griditem"></div><div id="l1r0c1" class="griditem"></div><div id="l1r0c2" class="griditem"></div><div id="l1r0c3" class="griditem"></div>
+	<div id="l1r1c0" class="griditem"></div><div id="l1r1c1" class="griditem"></div><div id="l1r1c2" class="griditem"></div><div id="l1r1c3" class="griditem"></div>
+	<div id="l1r2c0" class="griditem"></div><div id="l1r2c1" class="griditem"></div><div id="l1r2c2" class="griditem"></div><div id="l1r2c3" class="griditem"></div>
+	<div id="l1r3c0" class="griditem"></div><div id="l1r3c1" class="griditem"></div><div id="l1r3c2" class="griditem"></div><div id="l1r3c3" class="griditem"></div>
+</div>
+<div id="canvas2" class="grid_absolute_4x4_circle" aria-hidden="true">
+	<div id="l1r0c0" class="griditem"></div><div id="l1r0c1" class="griditem"></div><div id="l1r0c2" class="griditem"></div><div id="l1r0c3" class="griditem"></div>
+	<div id="l1r1c0" class="griditem"></div><div id="l1r1c1" class="griditem"></div><div id="l1r1c2" class="griditem"></div><div id="l1r1c3" class="griditem"></div>
+	<div id="l1r2c0" class="griditem"></div><div id="l1r2c1" class="griditem"></div><div id="l1r2c2" class="griditem"></div><div id="l1r2c3" class="griditem"></div>
+	<div id="l1r3c0" class="griditem"></div><div id="l1r3c1" class="griditem"></div><div id="l1r3c2" class="griditem"></div><div id="l1r3c3" class="griditem"></div>
+</div>
+
+</div>
+
+<div id="subtextframe" aria-hidden="true"></div>
+
+<div id="contentframe" aria-hidden="true">
+<main id="main">
+<header>
+	<h1>signal drift</h1>
+</header>
+<nav>
+	<ul class="stanza">
+		<!-- <li><a href="#maincontent" id="skiptomaincontent">skip to main content</a></li> -->
+		<!-- <li><a href="index.html" id="homelink">return home</a></li> -->
+		<li><a href="#dashboard" id="gotodashboard">access dashboard</a></li>
+	</ul>
+</nav>
+
+<div class="screenreader-text">
+	<p>Your feedback is always welcome.</p>
+</div>
+
+<article id="maincontent">
+	<header>
+		<h1>about us</h1>
+		<h2>thoughts on form & pattern</h2>
+	</header>
+	
+</article>
+
+
+<fieldset id="dashboard">
+<legend>access dashboard</legend>
+<!-- <label for="sound"><input id="sound" type="checkbox"> play sound</label> -->
+<label for="highcontrast"><input id="highcontrast" type="checkbox"> high contrast</label>
+<label for="largetext"><input id="largetext" type="checkbox"> large text</label>
+<label for="darklight"><input id="darklight" type="checkbox"> dark / light</label>
+</fieldset>
+
+</main>
+<footer>
+<p id="animationcontrols" style="min-width:100%">
+<label for="animationonly"><input id="animationonly" type="checkbox"> animation only (hide text)</label>
+</p>
+<p><a href="#top" class="corelink">^ back to top</a></p>
+</footer>
+</div> <!-- end contentframe -->
+<div id="veilframe" aria-hidden="true"></div>
+</body>
+<script src="/code/datapoets.js"></script>
+<script>
+let z = getz();
+
+//draw
+( () => {
+
+	let width = window.innerWidth, height = window.innerHeight;
+	let max = Math.max(width, height), min = Math.min(width, height);
+	let dx = width/4, dy = height/4;
+	
+
+	window.addEventListener("resize", e => {
+		width = window.innerWidth; height = window.innerHeight;
+		max = Math.max(width, height), min = Math.min(width, height);
+		console.log("window.innerWidth = " + window.innerWidth);
+
+		let dx = width/4, dy = height/4;
+		
+	});
+
+	let count = 0;
+	
+	document.querySelector("#canvas0").querySelectorAll(".griditem").forEach( (el,j) => {
+		window.setInterval(() => { 
+			++count; 
+			let scaleX = " scaleX("+((count+1)%20)/8+")";
+			let scaleY = " scaleY("+(21-count%20)/8+")";
+			el.style.transform = scaleX + scaleY;
+		}, j*100+3000);
+	});
+
+	document.querySelector("#canvas1").querySelectorAll(".griditem").forEach( (el,j) => {
+		window.setInterval(() => { 
+			++count; 
+			let scaleX = " scaleX("+((count+1)%20)/10+")";
+			let scaleY = " scaleY("+(21-count%20)/10+")";
+			el.style.transform = scaleX + scaleY;
+		}, j*100+1000);
+	});
+	document.querySelector("#canvas2").querySelectorAll(".griditem").forEach( (el,j) => {
+		window.setInterval(() => { 
+			++count; 
+			let scale = " scale("+( (count+1)%20)/20+")";
+			el.style.transform =  scale;   
+		}, j*100+2000);
+	});
+})();
+
+</script>
+</html>
